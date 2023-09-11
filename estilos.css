@@ -1,0 +1,381 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: palevioletred;
+  background-color: #fbda61;
+  background-image: linear-gradient(45deg, #fbda61 0%, #ff5acd 100%);
+}
+header span {
+  text-decoration-color: azure;
+  text-shadow: palevioletred;
+}
+
+.portafolio {
+  background: #f2f2f2;
+}
+
+.galeria-port {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.imagen-port {
+  width: 24%;
+  margin-bottom: 10px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5);
+}
+.imagen-port > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+
+.hover-galeria {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  transform: scale(0);
+  background: palevioletred;
+  transition: transform 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.hover-galeria img {
+  width: 50px;
+}
+.hover-galeria p {
+  color: #f2f2f2;
+}
+
+.imagen-port:hover .hover-galeria {
+  transform: scale(1);
+}
+
+body {
+  background: #f2f2f2;
+  font-family: "Montserrat", sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 6% auto 0;
+}
+
+.single-card {
+  position: relative;
+  width: 280px;
+  height: 400px;
+  margin: 15px;
+  box-shadow: 0 2px 20px #000000;
+  transition: box-shadow 0.3s ease;
+  overflow: hidden;
+  background: palevioletred;
+  border-radius: 15px;
+  transition: all 0.8s ease-in-out;
+}
+.single-card :hover {
+  transform: translateY(-10px);
+}
+
+.img-area {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+.img-area img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.img-area :hover img {
+  transform: scale(1.1);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: palevioletred;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.single-card:hover .overlay {
+  opacity: 1;
+}
+
+.add-to-cart,
+.view-details {
+  background-color: #f2f2f2;
+  color: #333;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.add-to-cart:hover,
+.view-details:hover {
+  background-color: rgb(255, 0, 102);
+  color: #f2f2f2;
+  border: none;
+}
+
+.info {
+  padding: 10px;
+  text-align: center;
+  color: #f2f2f2;
+}
+.info h3 {
+  margin: 15px 0 10px;
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "Bebas Neue", sans-serif;
+}
+.info .price {
+  margin: 0;
+  font-size: 30px;
+  font-weight: bold;
+  color: #f2f2f2;
+}
+
+.nosotros {
+  text-align: justify;
+  line-height: 2em;
+}
+
+body {
+  background: #f2f2f2;
+}
+
+.products {
+  padding: 5% 0 0;
+}
+
+.card {
+  border: none;
+  box-shadow: 0 2px 20px #000000;
+}
+.card body {
+  color: #000000;
+  background: #f2f2f2;
+}
+.card title {
+  font-size: 30px;
+  font-weight: 700;
+  transition: all 0.5s ease-in-out;
+}
+
+.btn-group .btn {
+  background: palevioletred;
+  color: #f2f2f2;
+  font-size: 18px;
+  margin-right: 5px;
+  padding: 10px 20px;
+  font-weight: 700;
+  transition: all 0.6s ease-in;
+}
+
+.price {
+  font-size: 25px;
+  font-weight: 900;
+  transition: 0.6s;
+}
+
+.card:hover .price {
+  animation: pulse 0.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  0% {
+    transform: scale(1);
+  }
+}
+.card:hover .card-title {
+  letter-spacing: 5px;
+  font-weight: 300;
+}
+
+.btn:hover {
+  background: #f2f2f2;
+  color: palevioletred;
+}
+
+@media (max-width: 991px) {
+  .card {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .btn-group .btn {
+    font-size: 9px;
+  }
+}
+body {
+  background: #f2f2f2;
+}
+
+.form-area {
+  padding-top: 7%;
+}
+
+.row.single-form {
+  box-shadow: 0 2px 20px -5px #000000;
+}
+
+.left {
+  background: blueviolet;
+  padding: 200px 98px;
+}
+.left h2 {
+  font-family: poppins;
+  color: #f2f2f2;
+  font-weight: 700;
+  font-size: 48px;
+}
+.left span {
+  font-weight: 100;
+}
+
+.single-form {
+  background: #f2f2f2;
+}
+
+.right {
+  padding: 70px 100px;
+  position: relative;
+}
+.right i {
+  position: absolute;
+  font-size: 80px;
+  left: -27px;
+  top: 40%;
+  color: #f2f2f2;
+}
+
+.form-control {
+  border: 2px solid #000000;
+}
+
+.right button {
+  border: none;
+  border-radius: 0;
+  background: palevioletred;
+  width: 180px;
+  color: #f2f2f2;
+  padding: 15px 0;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.right button:hover {
+  background-color: #f2f2f2;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .right i {
+    top: -52px;
+    transform: rotate(90deg);
+    left: 50%;
+  }
+}
+@media (max-width: 767px) {
+  .left {
+    padding: 90px 15px;
+    text-align: center;
+  }
+  .left h2 {
+    font-size: 25px;
+  }
+  .right {
+    padding: 25px;
+  }
+  .right i {
+    top: -52px;
+    transform: rotate(90deg);
+    left: 46%;
+  }
+  .right button {
+    width: 150px;
+    padding: 12px 0;
+  }
+}
+footer {
+  background: palevioletred;
+  background-color: #fbda61;
+  background-image: linear-gradient(45deg, #fbda61 0%, #ff5acd 100%);
+  padding: 60px 0 30px 0;
+  margin: auto;
+  overflow: hidden;
+}
+
+.contenedor-footer {
+  display: flex;
+  width: 90%;
+  justify-content: space-evenly;
+  margin: auto;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #f2f2f2;
+}
+.contenedor-footer h4 {
+  color: #f2f2f2;
+  border-bottom: 3px solid #000000;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+.contenedor-footer p {
+  color: #f2f2f2;
+}
+
+.content-foo {
+  text-align: center;
+}
+.content-foo h4 {
+  text-align: center;
+}
+
+.titulo-final {
+  text-align: center;
+  font-size: 24px;
+  margin: 20px 0 0 0;
+  color: #f2f2f2;
+}/*# sourceMappingURL=estilos.css.map */
